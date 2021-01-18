@@ -3,6 +3,7 @@ const app = Vue.createApp({
 		return {
 			name: "Marcos",
 			age: 31,
+			myImage:"https://diolinux.com.br/wp-content/uploads/2021/01/sandbox.jpg" 
 		};
 	},
 	methods: {
@@ -12,9 +13,7 @@ const app = Vue.createApp({
 		randNumber(){
 			return Math.random();
 		},
-		displayPicture(){
-			return "https://diolinux.com.br/wp-content/uploads/2021/01/sandbox.jpg"
-		}
+
 	},
 });
 app.mount("#teste");
