@@ -22,10 +22,21 @@
 			<h2>Events in Action</h2>
 			<button v-on:click="add(4)">Add</button>
 			<button v-on:click="remove(2)">Remove</button>
+
+			<p v-once>Starting Counter : {{counter}}</p>
 			<p>Result: {{ counter }}</p>
 
-			<input type="text" v-on:input="setName" />
+      <input type="text" 
+      v-on:input="setName"
+      v-on:keyup.enter="confirmName" 
+      />
+
 			<p>Your Name Here: {{name}}</p>
+
+			<form v-on:submit.prevent="submitForm">
+				<input type="text" />
+				<button>Sign up</button>
+			</form>
 		</section>
 	</body>
 </html>
