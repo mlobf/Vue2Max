@@ -1,0 +1,21 @@
+Some Thoughts about this mess.
+
+->Methods
+  Can be used for event binding ...OR......
+  .... Data  Binding, {{ dataBindingOnTemplate }}(use by template).
+      Data Binding, method is executed for every 're-render' cycle of the 
+        component.
+        So use it for events or data binding that really needs to be re-evalueded 
+        all the time. Aka-> {{ events }}
+
+->Computed
+  Use with data binding, only.
+    There are great to derive data thats based in other data with the advantage 
+      that they will only be re-evalueded and re-executed by Vue, only, if the dependent data changed.
+
+->Watch 
+  Are not used directly by template, but you can "Watch" every data.
+  So They allows to run code in reaction to some change data. Aka: HTTP requests, set some timer,
+  Use for any non data updates you wanna make.
+
+Usually Watchers are the least used of thoose elements, the more commom are the Methods and, after it, Computed. 
