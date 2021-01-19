@@ -3,17 +3,38 @@ const app = Vue.createApp({
 		return {
 			counter: 0,
 			name: "",
+			//fullname: "",
+			lastName: "",
 		};
 	},
+
 	computed: {
 		fullname() {
 			console.log("Running again");
-			if (this.name === "") {
+			if (this.name === "" || this.lastName === "") {
 				return "";
 			}
-			return this.name + " " + " Leme";
+			return this.name + " " + this.lastName;
 		},
 	},
+	/*
+	watch: {
+		name(value) {
+			if (value === "") {
+				this.fullname = "";
+			} else {
+				this.fullname = value + " " + "Leme";
+			}
+		},
+		lastName(value) {
+			if (value === "") {
+				this.fullname = "";
+			} else {
+				this.fullname = this.name + " " + value;
+			}
+		},
+	},
+	*/
 	methods: {
 		// Computer Properties are as like methods without chain reaction.
 		//	Recalculate only if a dependency changes. That is computer trigger.
