@@ -19,6 +19,8 @@ const app = Vue.createApp({
 		resetInput() {
 			this.name = "";
 		},
+		// As Vue works recalculating after each call, 
+		//		use methods for dynamic calculation values
 		outputFullName() {
 			console.log('Running again...')
 			if (this.name === "") {
