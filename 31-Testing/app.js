@@ -4,7 +4,8 @@ const app = Vue.createApp({
 			number: 0,
 			target: 37,
 			counter: 0,
-			message: "",
+			message: " ",
+			timer: 0,
 		};
 	},
 	methods: {
@@ -15,13 +16,25 @@ const app = Vue.createApp({
 			return (this.counter = this.counter + 1);
 		},
 	},
-	watch: {
+	computed: {
 		until37() {
 			if (this.counter > this.target) {
-				return (this.message = "oi");
-			} else {
-				return (this.message = "n oi");
+				return (this.message = "Too much!!!");
 			}
+			if (this.counter < this.target) {
+				return (this.message = "Not there yet");
+			}
+			if (this.counter === 37) {
+				return (this.message = "37");
+			}
+		},
+	},
+	watch: {
+		until37() {
+			const that = this;
+			setTimeout(function () {
+				that.counter = 0;
+			}, 5000);
 		},
 	},
 });
