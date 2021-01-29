@@ -3,17 +3,17 @@ const app = Vue.createApp({
 		return {
 			boxASelected: false,
 			boxBSelected: false,
-			boxCSelected: false,
+			boxCSelected: false
 		};
 	},
 	methods: {
 		boxSelected(box) {
 			if (box === "A") {
-				this.boxASelected = false;
+				this.boxASelected = true;
 			} else if (box === "B") {
-				this.boxBSelected = false;
+				this.boxBSelected = true;
 			} else if (box === "C") {
-				this.boxCSelected = false;
+				this.boxCSelected = true;
 			}
 		},
 	},
