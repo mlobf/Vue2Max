@@ -3,8 +3,13 @@ const app = Vue.createApp({
 		return {
 			boxASelected: false,
 			boxBSelected: false,
-			boxCSelected: false
+			boxCSelected: false,
 		};
+	},
+	computed: {
+		boxAClasses() {
+			return { active: this.boxASelected };
+		},
 	},
 	methods: {
 		boxSelected(box) {
