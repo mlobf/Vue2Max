@@ -4,6 +4,10 @@ const app = Vue.createApp({
 			boxASelected: false,
 			boxBSelected: false,
 			boxCSelected: false,
+			boxDSelected: false,
+			boxESelected: false,
+			boxFSelected: false,
+			myMessage: "Hello World",
 		};
 	},
 	computed: {
@@ -20,6 +24,9 @@ const app = Vue.createApp({
 			} else if (box === "C") {
 				this.boxCSelected = !this.boxCSelected;
 			}
+		},
+		logOutPut(myMessage) {
+			alert(this.myMessage);
 		},
 	},
 });
