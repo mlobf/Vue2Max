@@ -27,7 +27,7 @@ const app = Vue.createApp({
 		},
 		/*logOutPut(myMessage) {
 			alert(this.myMessage);
-		},*/
+		},
 	},
 });
 
