@@ -5,8 +5,9 @@ const app = Vue.createApp({
 			name: "",
 		};
 	},
+
 	computed: {
-		fullname() {
+		fullName() {
 			console.log("Running again");
 			if (this.name === "") {
 				return "";
@@ -14,10 +15,11 @@ const app = Vue.createApp({
 			return this.name + " " + " Leme";
 		},
 	},
+
 	methods: {
 		// Computer Properties are as like methods without chain reaction.
 		//	Recalculate only if a dependency changes. That is computer trigger.
-		// 	Thoose will be re executed only if a related dependencies changed.
+		// 	Those will be re executed only if a related dependencies changed.
 		// 	It s the third big configuration of Vue app.
 		//	Data , Computed, Method.
 		//	TIP,
@@ -26,24 +28,28 @@ const app = Vue.createApp({
 		setName(event, lastName) {
 			this.name = event.target.value;
 		},
+
 		add(num) {
 			this.counter = this.counter + num;
 		},
+
 		reduce(num) {
 			this.counter = this.counter - num;
 			// this.counter--;
 		},
+
 		resetInput() {
 			this.name = "";
 		},
 		// As Vue works recalculating after each call,
 		//		use methods for dynamic calculation values
+
 		outputFullName() {
 			console.log("Running again...");
 			if (this.name === "") {
 				return "";
 			}
-			return this.name + "" + "Leme";
+			return this.name + "" + "Lem";
 		},
 	},
 });
