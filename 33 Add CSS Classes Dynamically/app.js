@@ -1,4 +1,3 @@
-
 const app = Vue.createApp({
 	data() {
 		return {
@@ -9,7 +8,9 @@ const app = Vue.createApp({
 	},
 	computed: {
 		boxAClasses() {
-			return { active: this.boxASelected };
+			return {
+				active: this.boxASelected,
+			};
 		},
 	},
 	methods: {
