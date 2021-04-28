@@ -4,7 +4,7 @@ const app = Vue.createApp({
 			name: "Marcos",
 			age: 31,
 			myImage: "https://diolinux.com.br/wp-content/uploads/2021/01/sandbox.jpg",
-			profissao: "programmer",
+			job: "programmer",
 		};
 	},
 	methods: {
@@ -13,6 +13,10 @@ const app = Vue.createApp({
 		},
 		randNumber() {
 			return Math.random();
+		},
+		simpleSum() {
+			const newAge = this.age;
+			return newAge;
 		},
 	},
 });
